@@ -1,0 +1,34 @@
+<!-- component -->
+<div class="flex h-screen w-full items-center justify-center bg-gray-900 bg-cover bg-no-repeat" style="background-image:url('https://images.unsplash.com/photo-1499123785106-343e69e68db1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80')">
+  <div class="rounded-xl bg-gray-800 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
+    <div class="text-white">
+      <div class="mb-8 flex flex-col items-center">
+        <%# <img src="https://www.logo.wine/a/logo/Instagram/Instagram-Glyph-Color-Logo.wine.svg" width="150" alt="" srcset="" /> %>
+        <h1 class="mb-2 text-2xl">Ruby Market</h1>
+        <span class="text-gray-300">Enter Login Details</span>
+      </div>
+      <form id="new_user" action="/users/sign_in" method="post">
+        <div class="mb-4 text-lg">
+          <input id="user_email" class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" name="user[email]" placeholder="id@email.com" />
+        </div>
+
+        <div class="mb-4 text-lg">
+          <input id="user_password"  class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="Password" name="user[password]" placeholder="*********" />
+        </div>
+                  <div>
+            <label class="inline-flex bg-opacity-50 text-inherit items-center cursor-pointer">
+            <input  name= "user[remember_me]" type="hidden" value="0" class="form-checkbox border-0  rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150">
+            <input id="remember_me" name= "user[remember_me]" value="1" type="checkbox" class="form-checkbox border-0  rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150">
+            <span class="ml-2 text-sm font-semibold text-blueGray-600">Remember me</span>
+            </label>
+          </div>
+                  <div class="text-right mt-2">
+          <a href="/users/password/new" class="text-sm font-semibold text-gray-300 hover:text-yellow-400 focus:text-yellow-400">Forgot Password?</a>
+        </div>
+        <div class="mt-8 flex justify-center text-lg text-black">
+          <button type="submit" class="rounded-3xl bg-yellow-400 bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
